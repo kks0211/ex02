@@ -3,7 +3,6 @@
      </div>
         <!-- /#page-wrapper -->
 
-    </div>
     <!-- /#wrapper -->
 
     <!-- jQuery 주석처리 -->

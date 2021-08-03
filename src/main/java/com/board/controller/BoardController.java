@@ -43,7 +43,7 @@ public class BoardController {
         return new ResponseEntity<>(HttpStatus.OK);
     }*/
 
-    @GetMapping("/board/{bno}")
+    //@GetMapping("/board/{bno}")
     public ModelAndView openBoardDetail(@PathVariable("bno") Long bno) throws Exception {
         ModelAndView mv = new ModelAndView("/board/restBoardDetail");
 
@@ -90,7 +90,7 @@ public class BoardController {
 
     @GetMapping("/get")
     public void get(@RequestParam("bno") Long bno, Model model) {
-        log.info("/get");
+        log.info("get : " + bno);
         model.addAttribute("board", service.read(bno));
     }
 

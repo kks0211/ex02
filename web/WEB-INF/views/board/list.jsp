@@ -38,20 +38,19 @@
 					<c:forEach items="${list}" var="board">
 						<tr>
 							<td><c:out value="${board.bno}" /></td>
-								<%-- <td><a href='/board/get?bno=<c:out value="${board.bno}"/>'><c:out value="${board.title}"/></a></td> --%>
+							<%-- <td><a href='/board/get?bno=<c:out value="${board.bno}"/>'><c:out value="${board.title}"/></a></td> --%>
 
 							<td><a class='move' href='<c:out value="${board.bno}"/>'>
-								<c:out value="${board.title}" />
+									<c:out value="${board.title}" />
 							</a></td>
 
 							<td><c:out value="${board.writer}" /></td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd"
-												value="${board.regdate}" /></td>
+									value="${board.regdate}" /></td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd"
-												value="${board.updateDate}" /></td>
+									value="${board.updatedate}" /></td>
 						</tr>
 					</c:forEach>
-
 				</table>
 
 				<div class='row'>
@@ -136,8 +135,6 @@
 					value='<c:out value="${ pageMaker.cri.type }"/>'> <input
 					type='hidden' name='keyword'
 					value='<c:out value="${ pageMaker.cri.keyword }"/>'>
-
-
 			</form>
 
 
@@ -237,10 +234,8 @@
 															+ $(this).attr(
 																	"href")
 															+ "'>");
-											actionForm.attr("action",
-													"/board/get");
+											actionForm.attr("action", "/board/get");
 											actionForm.submit();
-
 										});
 
 						var searchForm = $("#searchForm");
