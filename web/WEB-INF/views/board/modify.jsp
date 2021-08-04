@@ -63,7 +63,7 @@
                     <div class="form-group">
                         <label>Update Date</label>
                         <input class="form-control" name='updateDate'
-                               value='<fmt:formatDate pattern = "yyyy/MM/dd" value = "${board.updateDate}" />'
+                               value='<fmt:formatDate pattern = "yyyy/MM/dd" value = "${board.updatedate}" />'
                                readonly="readonly">
                     </div>
 
