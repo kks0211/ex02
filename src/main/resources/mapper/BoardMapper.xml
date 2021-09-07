@@ -3,7 +3,7 @@
 
 <mapper namespace="com.board.mapper.BoardMapper">
 
-    <select id="getList" resultType="com.board.domain.BoardVO">
+    <select id="getList" resultType="BoardVO">
         select *
         from tbl_board
         where bno > 0
@@ -22,7 +22,7 @@
         insert into tbl_board (bno, title, content, writer) values (#{bno}, #{title}, #{content}, #{writer})
     </insert>
 
-    <select id="read" resultType="com.board.domain.BoardVO">
+    <select id="read" resultType="BoardVO">
         select *
         from tbl_board
         where bno = #{bno}

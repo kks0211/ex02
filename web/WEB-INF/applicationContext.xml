@@ -9,8 +9,7 @@
        https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
     <!-- MySQL Connection -->
-    <!--<bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="url" value="jdbc:mysql://127.0.0.1:3306/book?useSSL=false&amp;serverTimezone=UTC"></property>
         <property name="username" value="root"></property>
@@ -20,8 +19,8 @@
     <!-- MyBatis Connection -->
     <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
-        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>
-        <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"></property>
     </bean>-->
 
     <!-- DAO -->
@@ -31,8 +30,7 @@
     </bean>-->
 
     <!-- ORACLE -->
-    <bean id="hikariConfig"
-          class="com.zaxxer.hikari.HikariConfig">
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <!--<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
         <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:XE"></property>
         <property name="username" value="book_ex"></property>
@@ -50,6 +48,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"></property>
     </bean>
 
     <mybatis-spring:scan base-package="com.board.mapper"></mybatis-spring:scan>

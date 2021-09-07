@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {RootConfig.class})
+@ContextConfiguration(locations = {"file:web/WEB-INF/applicationContext.xml"})
 @Log4j
 public class BoardMapperTests {
 
