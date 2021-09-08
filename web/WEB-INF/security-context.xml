@@ -11,11 +11,8 @@
     <!-- <bean id="customLoginSuccess" class="org.zerock.security.CustomLoginSuccessHandler"></bean> -->
     <!-- <bean id="customPasswordEncoder" class="org.zerock.security.CustomNoOpPasswordEncoder"></bean> -->
 
-    <bean id="bcryptPasswordEncoder"
-          class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-
-    <bean id="customUserDetailsService"
-          class="com.board.security.CustomUserDetailsService"></bean>
+    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <bean id="customUserDetailsService" class="com.board.security.CustomUserDetailsService"></bean>
 
 
     <security:http>
